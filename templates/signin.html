@@ -1,0 +1,96 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UploadMechine Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 80px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0;background-color: orange ; color: white">
+  <img src="{% static 'images/pic2.png' %}" class="fakeimg">
+  <h1>UploadMechine</h1>
+  <p>Perfect Place To Upload Documents</p> 
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">UploadMechine</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        
+        <a class="nav-link" href="/signup">Register</a>
+      </li>
+   
+  
+  </div>  
+</nav>
+
+<div class="container">
+    <h2 style="text-align: center">Login Validation</h2>
+    <p  style="text-align: center"><code>.was-validated to indicate what's missing before submitting the form:</code> </p>
+    
+    <hr style="  border-top: 8px solid orange; border-radius: 5px; ">
+    <form action="signin"  method = "POST" class="was-validated" >
+  
+   {% csrf_token %}
+      
+
+  
+        <div class="form-group">
+          <label for="usernme">username:</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+  
+  
+      <div class="form-group">
+        <label for="pass">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <hr style="  border-top: 8px solid orange; border-radius: 5px; ">
+      <div style="text-align: center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </br>
+    <div>
+       
+    </div>
+  
+  
+  
+  
+  </div>
+  
+        
+  
+
+
+<div class="jumbotron text-center" style="margin-bottom:0 ;background-color: orange ; color: white">
+  <p>UploadMechine CopyRight @2022</p>
+</div>
+
+</body>
+</html>
