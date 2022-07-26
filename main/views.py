@@ -29,7 +29,7 @@ def signup(request):
         new_user.last_name = last_name
         new_user.save()
       
-        return redirect("signin")
+        return redirect("signin.html")
    else:
               
       return render(request,"signup.html")
