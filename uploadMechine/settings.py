@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-!)(_1z1(-t$d(g7zn*@0j24#a$wkrpmh_jt&hhiun43&$68^zu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ashleytshishonga.github.io/uploadMechineDjango/]
 
 
 # Application definition
